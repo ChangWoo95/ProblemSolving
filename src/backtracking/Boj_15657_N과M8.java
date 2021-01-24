@@ -21,11 +21,11 @@ public class Boj_15657_N과M8 { //중복조합
         }
         Arrays.sort(input);
 
-        perm(0, 0);
+        reComb(0, 0);
         System.out.print(sb);
 
     }
-    static void perm(int depth, int start) {
+    static void reComb(int depth, int start) {
         if(depth == m) {
             for(int i = 0 ; i < depth; i++){
                 sb.append(output[i]).append(" ");
@@ -35,7 +35,7 @@ public class Boj_15657_N과M8 { //중복조합
         }
         for(int i = start; i < input.length; i++){
             output[depth] = input[i];
-            perm(depth + 1, i);
+            reComb(depth + 1, i);
         }
     }
 }

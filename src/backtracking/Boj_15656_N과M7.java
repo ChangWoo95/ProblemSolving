@@ -21,11 +21,11 @@ public class Boj_15656_N과M7 { //중복 순열
         }
         Arrays.sort(input);
 
-        perm(0);
+        rePerm(0);
         System.out.print(sb);
 
     }
-    static void perm(int depth) {
+    static void rePerm(int depth) {
         if(depth == m) {
             for(int i = 0 ; i < depth; i++){
                 sb.append(output[i]).append(" ");
@@ -35,7 +35,7 @@ public class Boj_15656_N과M7 { //중복 순열
         }
         for(int i = 0; i < input.length; i++){
             output[depth] = input[i];
-            perm(depth + 1);
+            rePerm(depth + 1);
         }
     }
 }
