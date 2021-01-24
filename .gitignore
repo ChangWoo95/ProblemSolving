@@ -1,6 +1,6 @@
 # 프로젝트 제외 경로
 /out/
-/.idea
+/.idea/*
 /src/til/*
 /src/study/*
 /ProblemSolving.iml
