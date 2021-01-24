@@ -3,7 +3,7 @@ package backtracking;
 import java.io.*;
 import java.util.*;
 
-public class Boj_15654_N과M5 {
+public class Boj_15654_N과M5 { // 순열
     static int n, m, output[], visited[];
     static ArrayList<Integer> numbers = new ArrayList<>();
     static StringBuilder sb = new StringBuilder();

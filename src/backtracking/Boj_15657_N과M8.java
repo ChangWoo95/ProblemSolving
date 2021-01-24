@@ -3,7 +3,7 @@ package backtracking;
 import java.io.*;
 import java.util.*;
 
-public class Boj_15657_N과M8 {
+public class Boj_15657_N과M8 { //중복조합
     static int n, m, output[], input[];
     static StringBuilder sb = new StringBuilder();
 
