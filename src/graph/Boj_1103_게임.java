@@ -29,7 +29,7 @@ public class Boj_1103_게임 {
     }
 
     static int findMax(int x, int y) {
-        if(!isIn(x, y)) return 0; // 좌표가 map을 벗어나면 
+        if(!isIn(x, y)) return 0; // 좌표가 map을 벗어나면
         if(map[x].charAt(y) == 'H') return 0; // 함정에 걸린다면
         if(checked[x][y]) { // 예전에 방문을 한 곳이라면, 무한루프가 돌 수 있는 구조이므로 조건에 따라 -1 반환
             System.out.print(-1);
