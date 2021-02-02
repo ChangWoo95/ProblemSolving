@@ -65,7 +65,6 @@ public class Boj_1713_후보추천하기 {
             if(flag){
                 // 걸 수 있는 자리가 없는 경우
                 if(frame.size() == n){
-                    // 점수가 다르면
                     Collections.sort(frame, new Comparator<People>() {
                         @Override
                         public int compare(People p1, People p2){
