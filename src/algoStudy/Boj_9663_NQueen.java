@@ -28,7 +28,7 @@ public class Boj_9663_NQueen {
     }
     static boolean isFine(int x){
         for(int i = 1; i<x; i++){
-            if(col[i] == col[x] || Math.abs(col[x] - col[i]) == (x - i)) return false;
+            if(col[i] == col[x] || Math.abs(col[x] - col[i]) == (x - i)) return false; // 행이 같거나 대각선에 위치하고 있다면 실패
         }
         return true;
     }
