@@ -1,3 +1,5 @@
+package algoStudy;
+
 import java.io.*;
 
 public class Boj_9663_NQueen {
