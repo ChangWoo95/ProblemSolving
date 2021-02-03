@@ -1,3 +1,5 @@
+package algoStudy;
+
 import java.io.*;
 import java.util.*;
 /**
