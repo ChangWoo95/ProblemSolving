@@ -1,4 +1,4 @@
-package queue;
+package queuestack;
 
 import java.io.*;
 import java.util.*;

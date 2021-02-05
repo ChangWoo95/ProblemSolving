@@ -1,4 +1,4 @@
-package queue;
+package queuestack;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 
 public class Boj_S1_17225_세훈이의선물가게 {
 
-    static class Order implements Comparable<Order> {
+    static class Order {//implements Comparable<Order> {
         int time;
         char type;
 
@@ -18,16 +18,19 @@ public class Boj_S1_17225_세훈이의선물가게 {
             this.type = type;
         }
 
-        @Override
+        /*@Override
         public int compareTo(Order target) {
             if(this.time == target.time)  return target.type - this.type;
             return this.time - target.time;
-        }
+        }*/
     }
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        PriorityQueue<Order> pq = new PriorityQueue<>();
+        PriorityQueue<Order> pq = new PriorityQueue<>((o1, o2) -> {
+            if(o1.time == o2.time)  return o2.type - o1.type;
+            return o1.time - o2.time;
+        });
         StringTokenizer st = new StringTokenizer(br.readLine());
         StringBuilder sb = new StringBuilder();
 
