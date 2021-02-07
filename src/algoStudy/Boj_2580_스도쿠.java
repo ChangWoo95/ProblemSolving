@@ -26,7 +26,7 @@ public class Boj_2580_스도쿠 {
     }
 
     static void play(int depth){
-        if(depth == list.size()){
+        if(depth == list.size()){ // 문제없이 통과하면 정답!
             for(int i =0; i < 9; i++){
                 for(int j = 0; j < 9; j++)
                     sb.append(map[i][j]).append(' ');
@@ -44,7 +44,7 @@ public class Boj_2580_스도쿠 {
             map[x][y] = 0;
         }
     }
-    static boolean isRow(int x){
+    static boolean isRow(int x){ // 행에 중복되는 수 있는지 확인
         Arrays.fill(find,false);
         for(int i =0; i < 9; i++){
             if(map[x][i] == 0) continue;
@@ -53,7 +53,7 @@ public class Boj_2580_스도쿠 {
         }
         return true;
     }
-    static boolean isCol(int y) {
+    static boolean isCol(int y) { // 열에 중복되는 수 있는지 확인
         Arrays.fill(find,false);
         for(int i =0; i < 9; i++){
             if(map[i][y] == 0) continue;
@@ -62,7 +62,7 @@ public class Boj_2580_스도쿠 {
         }
         return true;
     }
-    static boolean isMatrix(int x, int y) {
+    static boolean isMatrix(int x, int y) { // 정방형 체크
         Arrays.fill(find, false);
         for(int i =(x/3)*3; i <= (x/3)*3 + 2; i++){
             for(int j =(y/3)*3; j <= (y/3)*3 + 2; j++ ){
