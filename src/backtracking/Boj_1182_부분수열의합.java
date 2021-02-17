@@ -24,7 +24,6 @@ public class Boj_1182_부분수열의합 {
         System.out.print(ans);
     }
     static void func(int depth) {
-        //if(cnt == 1 << (n - 1)) return ;
         if(depth == n) {
             long sum = 0;
             boolean flag = false;
@@ -34,6 +33,7 @@ public class Boj_1182_부분수열의합 {
                     flag = true;
                 }
             }
+            System.out.println(Arrays.toString(visited));
             if(flag && sum == m) ans++;
             cnt++;
             return;
