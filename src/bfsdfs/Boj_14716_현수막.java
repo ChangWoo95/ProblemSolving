@@ -1,6 +1,6 @@
 package bfsdfs;
 
-import java.awt.*;
+//import java.awt.*;
 import java.io.*;
 import java.util.*;
 
@@ -27,13 +27,28 @@ public class Boj_14716_현수막 {
 
         for(int i = 0 ; i <n; ++i) {
             for(int j = 0 ; j < m; ++j) {
-                if(!visited[i][j] && map[i][j] == 1) bfs(i, j);
+                //if(!visited[i][j] && map[i][j] == 1) bfs(i, j);
+                if(!visited[i][j] && map[i][j] == 1) {
+                    dfs(i, j);
+                    ++cnt;
+                }
             }
         }
         System.out.println(cnt);
     }
 
-    static void bfs(int x,int y){
+    static void dfs(int x,int y){
+        if(x < 0 || x >= n || y < 0 || y >= m || visited[x][y] || map[x][y] == 0) return;
+        visited[x][y] = true;
+
+        for(int i = 0 ; i < 8; ++i){
+            int nx = x + d[i][0];
+            int ny = y + d[i][1];
+            dfs(nx, ny);
+        }
+    }
+
+    /*static void bfs(int x,int y){
         Queue<Point> q = new LinkedList<>();
         q.add(new Point(x, y));
         visited[x][y] = true;
@@ -52,7 +67,6 @@ public class Boj_14716_현수막 {
                 }
             }
         }
-
         cnt++;
-    }
+    }*/
 }
