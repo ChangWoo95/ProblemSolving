@@ -4,8 +4,6 @@ import java.io.*;
 import java.util.*;
 
 public class Boj_5587_카드캡터상근이 {
-    static Stack<Integer> ss = new Stack<>();
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
