@@ -13,7 +13,7 @@ public class Boj_2042_구간합구하기 {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
         int k = Integer.parseInt(st.nextToken());
-        int h = (int)(Math.log10((double)n) /Math.log10((double)2)) + 1;
+        int h = (int)Math.ceil((Math.log10((double)n) /Math.log10((double)2)));
         long[] arr = new long[n];
 
         for(int i = 0; i <n; ++i){
