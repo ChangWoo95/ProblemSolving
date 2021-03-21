@@ -43,7 +43,7 @@ public class Boj_1922_네트워크연결 {
             if(find(edge.from) != find(edge.to)){
                 answer += edge.cost;
                 ++cnt;
-                if(cnt == n) break;
+                if(cnt == n-1) break;
                 union(edge.from, edge.to);
             }
         }
