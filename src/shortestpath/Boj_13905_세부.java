@@ -35,6 +35,7 @@ public class Boj_13905_세부 {
         int[] dist = new int[n+1];
         dist[s] = INF;
         pq.add(new int[]{s, 0});
+
         while(!pq.isEmpty()){
             int[] cur = pq.poll();
             if(visited[cur[0]]) continue;
