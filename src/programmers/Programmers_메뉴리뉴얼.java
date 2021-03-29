@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.*;
 
-public class kakao2021_메뉴리뉴얼 {
+public class Programmers_메뉴리뉴얼 {
     public static List<Character> alphaList;
     public static int[] bitList;
     public static char[] output;
