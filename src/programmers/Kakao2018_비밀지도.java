@@ -1,6 +1,6 @@
 package programmers;
 
-public class kakao2018_비밀지도 {
+public class Kakao2018_비밀지도 {
 
     public static String[] solution(int n, int[] arr1, int[] arr2) {
 
