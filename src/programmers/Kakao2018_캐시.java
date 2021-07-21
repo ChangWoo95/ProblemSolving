@@ -12,7 +12,6 @@ public class Kakao2018_캐시 {
 
         for(int i = 0 ; i <cities.length; ++i) {
             String lowercaseCity = cities[i].toLowerCase();
-            boolean flag = false;
             if(caches.containsKey(lowercaseCity)){
                 caches.replace(lowercaseCity, i);
                 answer += 1;
