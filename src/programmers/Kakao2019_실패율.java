@@ -14,7 +14,7 @@ public class Kakao2019_실패율 {
         }
     }
     public int[] solution(int N, int[] stages) {
-        int[] challengersPerStage = getChallengersPerStage(N, stages);
+        int[] challengersPerStage = getChallengersPerStage(stages);
         int[] ClearedPlayersPerStage = getClearedPlayersPerStage(N, challengersPerStage);
 
         failure[] failures = new failure[N];
@@ -35,7 +35,7 @@ public class Kakao2019_실패율 {
         return Arrays.stream(failures).map(s -> s.stage).mapToInt(Integer::intValue).toArray();
     }
 
-    public int[] getChallengersPerStage(int N, int[] reachedStages) {
+    public int[] getChallengersPerStage(int[] reachedStages) {
         int[] ret = new int[MAX_STAGE_COUNT];
         for(int i = 0 ; i < reachedStages.length; ++i) {
             int reachedStage = reachedStages[i];
